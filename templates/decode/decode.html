@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decode</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #76C4AE;
+            font-size: 50px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 100px;
+            color: #76C4AE;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; /* add border-radius for rounded edges */
+            transition: background-color 0.3s ease;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #102411;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #76C4AE;
+            padding: 10px;
+            font-size: 12px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .message-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .message-label {
+            font-size: 18px;
+        }
+
+        .message-box {
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Decode</h1>
+    </header>
+
+    <main>
+        <form action="/decode" method="POST" enctype="multipart/form-data">
+            <label for="encoded_image">Encoded Image:</label>
+            <br>
+            <input type="file" name="encoded_image" required>
+            <br><br>
+            <button type="submit">Decode</button>
+        </form>
+        
+        <div class="message-container">
+            <p class="message-label">The decoded message is:</p>
+
+            <div class="message-box">
+                <p id="decoded-message">{{ message }}</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="/">Return to Main Page</a>
+        <br>
+        &copy; 2023 Stoica Mihai-Bogdan. All rights reserved.
+    </footer>
+</body>
+</html>

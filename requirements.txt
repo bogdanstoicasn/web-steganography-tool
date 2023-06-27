@@ -1,0 +1,7 @@
+Flask==2.0.2
+Pillow==8.4.0
+click>=7.1.2
+itsdangerous>=2.0
+Werkzeug>=2.0
+Jinja2>=3.0
+MarkupSafe>=2.0
